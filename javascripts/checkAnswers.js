@@ -38,6 +38,8 @@ $("#submit").click(function (e) {
 	var content = "<h2>Your score: " + score + "/10!</h2>";
 	content += "<p>" + comment + "</p>";
 	content += "<h3>Share your score, challenge your friends!</h3>";
-	content += '<div class="addthis_sharing_toolbox"></div>';
 	$("#score").html(content);
+	var shareText = "I got " + score + "/10 on the Pywat Quizz! Can you do better?"
+	$("#fbDesc").attr("content", shareText);
+	twttr.widgets.createShareButton("http://bit.ly/pywat", document.getElementById("shareButtons"), {text:shareText});
 });
