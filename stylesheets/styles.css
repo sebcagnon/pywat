@@ -290,7 +290,7 @@ input {
   text-decoration: none;
 }
 
-.fb-share-button {
+.fb-share-button iframe {
   width: 90px !important;
   height: 20px !important;
 }
